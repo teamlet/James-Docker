@@ -2,7 +2,7 @@
 
 FROM openjdk:8u171-jdk
 
-MAINTAINER stonelu "stonelu214@gmail.com"
+MAINTAINER stonelu "teamlet@gmail.com"
 
 # Add build environment
 ENV SRC_DIR /usr/local/james
@@ -14,9 +14,9 @@ WORKDIR $WORK_DIR
 
 RUN mkdir /opt/tmp \
   && cd /opt/tmp \
-  && wget https://downloads.apache.org/james/server/3.4.0/james-server-app-3.4.0-app.zip \
-  && unzip james-server-app-3.4.0-app.zip \
-  && mv james-server-app-3.4.0-app/* $SRC_DIR/ \
+  && wget https://archive.apache.org/dist/james/server/james-server-app-3.1.0-app.zip  \
+  && unzip james-server-app-3.1.0-app.zip  \
+  && mv james-server-app-3.1.0-app/* $SRC_DIR/ \
   && rm -rf /opt/tmp  
 
 # Add volume of James configuration directory
