@@ -14,9 +14,9 @@ WORKDIR $WORK_DIR
 
 RUN mkdir /opt/tmp \
   && cd /opt/tmp \
-  && wget http://mirrors.shu.edu.cn/apache/james/server/james-server-app-3.1.0-app.zip \
-  && unzip james-server-app-3.1.0-app.zip \
-  && mv james-server-app-3.1.0/* $SRC_DIR/ \
+  && wget https://downloads.apache.org/james/server/3.4.0/james-server-app-3.4.0-app.zip \
+  && unzip james-server-app-3.4.0-app.zip \
+  && mv james-server-app-3.4.0-app/* $SRC_DIR/ \
   && rm -rf /opt/tmp  
 
 # Add volume of James configuration directory
